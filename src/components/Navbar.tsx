@@ -56,7 +56,7 @@ export function Navbar() {
             <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg">
               <span className="text-white text-xl font-bold">P</span>
             </div>
-            <span className="text-xl font-semibold text-gray-900">
+            <span className="text-sm sm:text-xl font-semibold text-gray-900">
               PRIMEBACK SOLUTIONS L.L.C-FZ
             </span>
           </button>
