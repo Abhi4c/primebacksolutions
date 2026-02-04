@@ -13,12 +13,40 @@ export function Contact() {
     company: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Mock form submission
-    toast.success('Thank you! We\'ll be in touch soon.');
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://formsubmit.co/Info@primebacksolutions.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company || 'Not provided',
+          message: formData.message,
+          _subject: `New Contact Form Submission from ${formData.name}`,
+          _captcha: 'false'
+        }),
+      });
+
+      if (response.ok) {
+        toast.success('Thank you! We\'ll be in touch soon.');
+        setFormData({ name: '', email: '', company: '', message: '' });
+      } else {
+        toast.error('Something went wrong. Please try again or email us directly.');
+      }
+    } catch (error) {
+      toast.error('Failed to send message. Please try again or email us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -87,7 +115,24 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Location</h4>
-                  <p className="text-gray-600">India</p>
+                  <p className="text-gray-600">Etihad Airways Centre 5th Floor, Abu Dhabi, UAE</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
+                  <a 
+                    href="tel:+971552704548"
+                    className="text-blue-600 hover:text-blue-700 transition-colors"
+                  >
+                    +971 55 270 4548
+                  </a>
                 </div>
               </div>
             </div>
@@ -96,7 +141,7 @@ export function Contact() {
             <div className="hidden lg:block mt-12">
               <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 text-white">
                 <h4 className="text-xl font-semibold mb-3">
-                  Why Choose Primeback Solutions?
+                  Why Choose PRIMEBACK SOLUTIONS L.L.C-FZ?
                 </h4>
                 <ul className="space-y-2 text-blue-50">
                   <li>✓ Expert team with proven track record</li>
@@ -182,9 +227,10 @@ export function Contact() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white px-8 py-6 text-lg rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300 group"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white px-8 py-6 text-lg rounded-lg shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Request Proposal
+                  {isSubmitting ? 'Sending...' : 'Request Proposal'}
                   <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>

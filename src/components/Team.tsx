@@ -8,31 +8,34 @@ export function Team() {
       name: 'Praveen Poonolly',
       title: 'CEO & Founder',
       bio: 'Visionary leader with extensive experience in actuarial services and strategic business development',
-      image: 'https://images.unsplash.com/photo-1538978939284-4ecb3fc4ad5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMGV4ZWN1dGl2ZSUyMGluZGlhbnxlbnwxfHx8fDE3NzAxODc0MzR8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/praveen.png',
     },
     {
       name: 'Deepika Godha',
       title: 'Head of Marketing',
       bio: 'Strategic marketing expert driving brand growth and digital transformation initiatives',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      image: '/deepika.png',
     },
     {
-      name: 'Web Designer',
-      title: 'India Office',
-      bio: 'Creative designer crafting beautiful and intuitive digital experiences',
-      image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-    },
-    {
-      name: 'Social Media Executive',
-      title: 'India Office',
-      bio: 'Dynamic social media strategist creating engaging content and managing brand presence',
-      image: 'https://images.unsplash.com/photo-1708447134640-2b57ad0dd846?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2NpYWwlMjBtZWRpYSUyMG1hbmFnZXIlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzcwMTg3NjY2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    },
-    {
-      name: 'Senior Analyst',
-      title: 'India Office',
+      name: 'Rohan Jagdale',
+      title: 'Senior Analyst',
+      location: 'Indian Office',
       bio: 'Data-driven analyst providing insights and supporting actuarial modelling initiatives',
-      image: 'https://images.unsplash.com/photo-1622705538993-6070f10a3b26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHlzdCUyMHByb2Zlc3Npb25hbCUyMGluZGlhbnxlbnwxfHx8fDE3NzAxODc2Njd8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: '/rohan.png',
+    },
+    {
+      name: 'Janak',
+      title: 'Social Media Executive',
+      location: 'Indian Office',
+      bio: 'Dynamic social media strategist creating engaging content and managing brand presence',
+      image: '/janak.png',
+    },
+    {
+      name: 'Abhijeet C G',
+      title: 'Web Designer',
+      location: 'Indian Office',
+      bio: 'Creative designer crafting beautiful and intuitive digital experiences',
+      image: '/abhijeet2.png',
     },
   ];
 
@@ -82,19 +85,24 @@ export function Team() {
                 <p className="text-sm font-medium text-blue-600 mb-3">
                   {member.title}
                 </p>
+                {member.location && (
+                  <p className="text-xs text-gray-500 mb-3">
+                    {member.location}
+                  </p>
+                )}
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
                   {member.bio}
                 </p>
 
                 {/* Social Links */}
-                <div className="flex items-center space-x-3 pt-4 border-t border-gray-100">
+                {/* <div className="flex items-center space-x-3 pt-4 border-t border-gray-100">
                   <button className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 hover:bg-blue-600 text-gray-600 hover:text-white transition-colors duration-300">
                     <Linkedin className="w-4 h-4" />
                   </button>
                   <button className="flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 hover:bg-blue-600 text-gray-600 hover:text-white transition-colors duration-300">
                     <Mail className="w-4 h-4" />
                   </button>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}

@@ -32,9 +32,9 @@ export function Navbar() {
   const navLinks = [
     { name: 'Home', id: 'hero' },
     { name: 'Services', id: 'services' },
-    { name: 'Actuarial', id: 'actuarial' },
+    // { name: 'Actuarial', id: 'actuarial' },
     { name: 'Social Media', id: 'social-media' },
-    { name: 'Work', id: 'work' },
+    // { name: 'Work', id: 'work' },
     { name: 'Team', id: 'team' },
     { name: 'Clients', id: 'clients' },
     { name: 'Contact', id: 'contact' },
@@ -56,11 +56,8 @@ export function Navbar() {
             <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg">
               <span className="text-white text-xl font-bold">P</span>
             </div>
-            <span className="hidden sm:inline-block text-xl font-semibold text-gray-900">
-              Primeback Solutions
-            </span>
-            <span className="sm:hidden text-lg font-semibold text-gray-900">
-              Primeback
+            <span className="text-xl font-semibold text-gray-900">
+              PRIMEBACK SOLUTIONS L.L.C-FZ
             </span>
           </button>
 

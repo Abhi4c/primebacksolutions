@@ -38,7 +38,7 @@ export function Footer() {
               <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg">
                 <span className="text-white text-xl font-bold">P</span>
               </div>
-              <span className="text-xl font-semibold">Primeback Solutions Pvt Ltd</span>
+              <span className="text-xl font-semibold">PRIMEBACK SOLUTIONS L.L.C-FZ</span>
             </div>
             <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
               Your professional partner in actuarial support and digital marketing services. 
@@ -94,7 +94,7 @@ export function Footer() {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} Primeback Solutions Pvt Ltd. All rights reserved.
+              © {currentYear} PRIMEBACK SOLUTIONS L.L.C-FZ. All rights reserved.
             </p>
             <div className="flex items-center space-x-4">
               <a

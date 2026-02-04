@@ -3,8 +3,8 @@ import { motion } from 'motion/react';
 export function Clients() {
   const clients = [
     { name: 'Diamondere', logo: 'D', image: '/diamondere-logo-v2.svg' },
-    { name: 'Svj', logo: 'S', image: '/svjlogo.png' },
-    { name: 'navaara', logo: 'N' },
+    { name: 'Svj', logo: 'S', image: '/svjlogonew.png' },
+    { name: 'navaara', logo: 'N', image: '/navaara.png' },
     { name: 'Wimbledon Actuarial Consulting', logo: 'W' },
   ];
 
@@ -37,7 +37,7 @@ export function Clients() {
               className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-200 flex flex-col items-center justify-center"
             >
               {client.image ? (
-                <div className={`flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 ${client.name === 'Svj' ? 'w-56 h-28' : 'w-32 h-20'}`}>
+                <div className={`flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ${client.name === 'Svj' ? 'w-56 h-28' : 'w-32 h-20'}`}>
                   <img 
                     src={client.image} 
                     alt={`${client.name} logo`}
@@ -45,13 +45,10 @@ export function Clients() {
                   />
                 </div>
               ) : (
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-3xl font-bold text-white">{client.logo}</span>
                 </div>
               )}
-              <h3 className="text-center font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                {client.name}
-              </h3>
             </motion.div>
           ))}
         </div>
