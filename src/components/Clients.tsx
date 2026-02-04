@@ -5,7 +5,7 @@ export function Clients() {
     { name: 'Diamondere', logo: 'D', image: '/diamondere-logo-v2.svg' },
     { name: 'Svj', logo: 'S', image: '/svjlogonew.png' },
     { name: 'navaara', logo: 'N', image: '/navaara.png' },
-    { name: 'Wimbledon Actuarial Consulting', logo: 'W' },
+    { name: 'Wimbledon Actuarial Consulting', logo: 'WAC' },
   ];
 
   return (
@@ -45,8 +45,8 @@ export function Clients() {
                   />
                 </div>
               ) : (
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl font-bold text-white">{client.logo}</span>
+                <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl font-bold bg-gradient-to-br from-gray-800 to-gray-950 bg-clip-text text-transparent">{client.logo}</span>
                 </div>
               )}
             </motion.div>
