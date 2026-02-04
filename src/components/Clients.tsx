@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 export function Clients() {
   const clients = [
     { name: 'Diamondere', logo: 'D', image: '/diamondere-logo-v2.svg' },
-    { name: 'Svj', logo: 'S', image: '/svjlogonew.png' },
+    { name: 'Svj', logo: 'S', image: '/svjlogonew.svg' },
     { name: 'navaara', logo: 'N', image: '/navaara.png' },
     { name: 'Wimbledon Actuarial Consulting', logo: 'WAC' },
   ];

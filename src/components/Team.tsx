@@ -8,34 +8,34 @@ export function Team() {
       name: 'Praveen Poonolly',
       title: 'CEO & Founder',
       bio: 'Visionary leader with extensive experience in actuarial services and strategic business development',
-      image: '/praveen.png',
+      image: '/praveen.webp',
     },
     {
       name: 'Deepika Godha',
       title: 'Head of Marketing',
       bio: 'Strategic marketing expert driving brand growth and digital transformation initiatives',
-      image: '/deepika.png',
+      image: '/deepika.webp',
     },
     {
       name: 'Rohan Jagdale',
       title: 'Senior Analyst',
-      location: 'Indian Office',
+    //   location: 'Indian Office',
       bio: 'Data-driven analyst providing insights and supporting actuarial modelling initiatives',
-      image: '/rohan.png',
+      image: '/rohan.webp',
     },
     {
       name: 'Janak',
       title: 'Social Media Executive',
-      location: 'Indian Office',
+    //   location: 'Indian Office',
       bio: 'Dynamic social media strategist creating engaging content and managing brand presence',
-      image: '/janak.png',
+      image: '/janak.webp',
     },
     {
       name: 'Abhijeet C G',
       title: 'Web Designer',
-      location: 'Indian Office',
+    //   location: 'Indian Office',
       bio: 'Creative designer crafting beautiful and intuitive digital experiences',
-      image: '/abhijeet2.png',
+      image: '/abhijeet2.webp',
     },
   ];
 
@@ -85,11 +85,11 @@ export function Team() {
                 <p className="text-sm font-medium text-blue-600 mb-3">
                   {member.title}
                 </p>
-                {member.location && (
+                {/* {member.location && (
                   <p className="text-xs text-gray-500 mb-3">
                     {member.location}
                   </p>
-                )}
+                )} */}
                 <p className="text-sm text-gray-600 leading-relaxed mb-4">
                   {member.bio}
                 </p>
