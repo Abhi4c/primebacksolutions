@@ -44,12 +44,12 @@ export function SocialMedia() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200"
+                  className="bg-white p-8 rounded-2xl shadow-sm transition-all duration-300 border border-gray-100"
                 >
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl mb-6">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">

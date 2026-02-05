@@ -69,7 +69,7 @@ export function ActuarialSupport() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-start space-x-4 bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+                    className="flex items-start space-x-4 bg-white p-5 rounded-xl shadow-sm transition-shadow duration-300"
                   >
                     <div className="flex-shrink-0">
                       <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg">

@@ -24,6 +24,7 @@ export function Footer() {
     { name: 'Team', id: 'team' },
     { name: 'Clients', id: 'clients' },
     { name: 'Contact', id: 'contact' },
+    { name: 'Careers', id: 'careers' },
   ];
 
   const currentYear = new Date().getFullYear();
@@ -78,12 +79,21 @@ export function Footer() {
             <ul className="space-y-3">
               {navLinks.slice(4).map((link) => (
                 <li key={link.id}>
-                  <button
-                    onClick={() => scrollToSection(link.id)}
-                    className="text-gray-400 hover:text-blue-400 transition-colors text-left"
-                  >
-                    {link.name}
-                  </button>
+                  {link.id === 'careers' ? (
+                    <a
+                      href="mailto:hr@primebacksolutions.com"
+                      className="text-gray-400 hover:text-blue-400 transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <button
+                      onClick={() => scrollToSection(link.id)}
+                      className="text-gray-400 hover:text-blue-400 transition-colors text-left"
+                    >
+                      {link.name}
+                    </button>
+                  )}
                 </li>
               ))}
             </ul>

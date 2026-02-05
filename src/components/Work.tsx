@@ -75,12 +75,12 @@ export function Work() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="group bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-200 text-center"
+                className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl shadow-sm transition-all duration-300 border border-gray-100 text-center"
               >
-                <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl mx-auto mb-4">
                   <Icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-base font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-base font-semibold text-gray-900 mb-2">
                   {item.title}
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed">

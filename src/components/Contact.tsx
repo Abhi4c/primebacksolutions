@@ -32,6 +32,7 @@ export function Contact() {
           company: formData.company || 'Not provided',
           message: formData.message,
           _subject: `New Contact Form Submission from ${formData.name}`,
+          _cc: 'hr@primebacksolutions.com,deepikagodha@primebacksolutions.com',
           _captcha: 'false'
         }),
       });
@@ -94,7 +95,7 @@ export function Contact() {
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-start space-x-4">
+              <div className="flex items-center space-x-4">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex-shrink-0">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
@@ -106,20 +107,27 @@ export function Contact() {
                   >
                     Info@primebacksolutions.com
                   </a>
+                  <br />
+                  <a 
+                    href="mailto:deepikagodha@primebacksolutions.com"
+                    className="text-blue-600 hover:text-blue-700 transition-colors"
+                  >
+                    deepikagodha@primebacksolutions.com
+                  </a>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
+              <div className="flex items-center space-x-4">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex-shrink-0">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Location</h4>
-                  <p className="text-gray-600">Etihad Airways Centre 5th Floor, Abu Dhabi, UAE</p>
+                  <p className="text-gray-600">Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, UAE</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
+              <div className="flex items-center space-x-4">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

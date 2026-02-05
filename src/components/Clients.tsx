@@ -34,10 +34,10 @@ export function Clients() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-200 flex flex-col items-center justify-center"
+              className="group bg-white p-8 rounded-2xl shadow-sm {/* hover:shadow-lg - commented for future use */} transition-all duration-300 border border-gray-100 {/* hover:border-blue-200 - commented for future use */} flex flex-col items-center justify-center"
             >
               {client.image ? (
-                <div className={`flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ${client.name === 'Svj' ? 'w-56 h-28' : 'w-32 h-20'}`}>
+                <div className={`flex items-center justify-center {/* group-hover:scale-110 - commented for future use */} transition-transform duration-300 ${client.name === 'Svj' ? 'w-56 h-28' : 'w-32 h-20'}`}>
                   <img 
                     src={client.image} 
                     alt={`${client.name} logo`}

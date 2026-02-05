@@ -82,12 +82,12 @@ export function ServicesMarketing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 cursor-pointer"
+                className="bg-white p-6 rounded-2xl shadow-sm transition-all duration-300 border border-gray-100"
               >
-                <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl mb-4">
                   <Icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {service.title}
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
