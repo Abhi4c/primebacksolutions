@@ -103,14 +103,14 @@ export function Contact() {
                   <h4 className="font-semibold text-gray-900 mb-1 text-sm [@media(min-width:390px)]:text-base">Email</h4>
                   <a 
                     href="mailto:Info@primebacksolutions.com"
-                    className="text-blue-600 hover:text-blue-700 transition-colors text-sm break-all"
+                    className="text-blue-600 hover:text-blue-700 transition-colors text-sm [@media(min-width:390px)]:text-base break-all"
                   >
                     Info@primebacksolutions.com
                   </a>
                   <br />
                   <a 
                     href="mailto:deepikagodha@primebacksolutions.com"
-                    className="text-blue-600 hover:text-blue-700 transition-colors text-sm"
+                    className="text-blue-600 hover:text-blue-700 transition-colors text-sm [@media(min-width:390px)]:text-base"
                   >
                     deepikagodha@primebacksolutions.com
                   </a>
@@ -122,8 +122,8 @@ export function Contact() {
                   <MapPin className="w-5 h-5 [@media(min-width:390px)]:w-6 [@media(min-width:390px)]:h-6 text-white" />
                 </div>
                 <div className="min-w-0">
-                  <h4 className="font-semibold text-gray-900 mb-1 text-sm">Location</h4>
-                  <p className="text-gray-600 text-sm">Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, UAE</p>
+                  <h4 className="font-semibold text-gray-900 mb-1 text-sm [@media(min-width:390px)]:text-base">Location</h4>
+                  <p className="text-gray-600 text-sm [@media(min-width:390px)]:text-base">Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, UAE</p>
                 </div>
               </div>
 
@@ -137,7 +137,7 @@ export function Contact() {
                   <h4 className="font-semibold text-gray-900 mb-1 text-sm [@media(min-width:390px)]:text-base">Phone</h4>
                   <a 
                     href="tel:+971552704548"
-                    className="text-blue-600 hover:text-blue-700 transition-colors text-sm"
+                    className="text-blue-600 hover:text-blue-700 transition-colors text-sm [@media(min-width:390px)]:text-base"
                   >
                     +971 55 270 4548
                   </a>
